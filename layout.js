@@ -1,6 +1,6 @@
-
-module.exports =({content},date)=>{
-    return`<!DOCTYPE html>
+const nav = require('./navidation');
+module.exports = ({ content }, date) => {
+	return `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -10,9 +10,10 @@ module.exports =({content},date)=>{
         <title>TODO</title>
     </head>
     <body>
- <div class="box" id="heading"> ${date}</div>
+    ${nav()}
+ <div class="box" id="heading"> <h1>${date}</h1></div>
    
         ${content}
     </body>
-    </html>`
-}
+    </html>`;
+};
